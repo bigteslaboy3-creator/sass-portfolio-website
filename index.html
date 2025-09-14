@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en" class="antialiased">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jane Developer — SaaS & Web Engineer</title>
+    <meta name="description"
+        content="Jane Developer — SaaS engineer building fast, scalable web apps, APIs and AI-powered features. Portfolio, projects, services and contact." />
+    <meta name="keywords" content="SaaS developer, web developer, frontend, backend, APIs, AI, portfolio" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CDN (production-ready builds should use the CLI to purge unused CSS) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+
+    <!-- Simple utility CSS for transitions / small helpers -->
+    
+       
+</head>
+
+<body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 leading-relaxed">
+
+    <!-- NAVBAR -->
+    <header class="fixed w-full z-30 top-0">
+        <nav class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+            <a href="#home" class="inline-flex items-center gap-3 font-semibold text-lg">
+                <span
+                    class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white">JD</span>
+                <span class="hidden sm:inline">Jane Developer</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#projects" class="hover:underline">Projects</a>
+                <a href="#services" class="hover:underline">Services</a>
+                <a href="#about" class="hover:underline">About</a>
+                <a href="#blog" class="hover:underline">Blog</a>
+                <a href="#contact" class="hover:underline">Contact</a>
+                <button id="themeToggle" class="p-2 rounded-md glass" aria-label="Toggle dark mode">🌙</button>
+                <a href="#contact"
+                    class="ml-2 inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md shadow-sm">Hire
+                    me</a>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="md:hidden">
+                <button id="mobileOpen" class="p-2 rounded-md glass">☰</button>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="md:hidden hidden bg-white/70 dark:bg-slate-900/80 glass backdrop-blur-md">
+            <div class="px-6 py-4 flex flex-col gap-3">
+                <a href="#projects" class="py-2">Projects</a>
+                <a href="#services" class="py-2">Services</a>
+                <a href="#about" class="py-2">About</a>
+                <a href="#blog" class="py-2">Blog</a>
+                <a href="#contact" class="py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- HERO -->
+        <section id="home" class="min-h-[70vh] flex items-center">
+            <div class="max-w-6xl mx-auto px-6 grid gap-8 grid-cols-1 md:grid-cols-2 items-center">
+                <div>
+                    <p class="text-indigo-500 font-medium">SaaS Engineer • API Specialist • AI Integrator</p>
+                    <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold leading-tight">I build scalable SaaS products
+                        that help teams ship faster.</h1>
+                    <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">I design and develop full-stack web
+                        applications, APIs and AI-enhanced features that increase user retention and reduce operational
+                        costs.</p>
+                    <div class="mt-6 flex gap-3">
+                        <a href="#projects"
+                            class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-md shadow hover:scale-[1.02] transition">View
+                            projects</a>
+                        <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 border rounded-md">Contact
+                            me</a>
+                        <a href="/resume.pdf" download
+                            class="inline-flex items-center gap-2 px-4 py-2 border rounded-md">Download CV</a>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
+                            alt="Laptop workspace" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 p-4 rounded-2xl glass shadow-xl hidden md:block">
+                        <div class="text-sm">Featured stat</div>
+                        <div class="font-bold text-xl">99.9% uptime</div>
+                        <div class="text-xs text-slate-400">SLA you can count on</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="py-16">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-2xl font-semibold">Skills</h2>
+                <p class="mt-2 text-slate-500">Core technologies and tools I use to build SaaS products.</p>
+
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <label class="flex justify-between text-sm"><span>Frontend — React /
+                                Next.js</span><span>90%</span></label>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-3 overflow-hidden">
+                            <div data-progress="90"
+                                class="h-3 rounded-full bg-indigo-500 w-0 transition-all duration-1000"></div>
+                        </div>
+
+                        <label class="flex justify-between text-sm mt-3"><span>Backend — Node / Python /
+                                Go</span><span>85%</span></label>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-3 overflow-hidden">
+                            <div data-progress="85"
+                                class="h-3 rounded-full bg-indigo-500 w-0 transition-all duration-1000"></div>
+                        </div>
+
+                        <label class="flex justify-between text-sm mt-3"><span>SaaS
+                                Architecture</span><span>88%</span></label>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-3 overflow-hidden">
+                            <div data-progress="88"
+                                class="h-3 rounded-full bg-indigo-500 w-0 transition-all duration-1000"></div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <label class="flex justify-between text-sm"><span>APIs &
+                                Integrations</span><span>92%</span></label>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-3 overflow-hidden">
+                            <div data-progress="92"
+                                class="h-3 rounded-full bg-indigo-500 w-0 transition-all duration-1000"></div>
+                        </div>
+
+                        <label class="flex justify-between text-sm mt-3"><span>AI Tools &
+                                MLOps</span><span>75%</span></label>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-3 overflow-hidden">
+                            <div data-progress="75"
+                                class="h-3 rounded-full bg-indigo-500 w-0 transition-all duration-1000"></div>
+                        </div>
+
+                        <label class="flex justify-between text-sm mt-3"><span>DevOps,
+                                Monitoring</span><span>80%</span></label>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-3 overflow-hidden">
+                            <div data-progress="80"
+                                class="h-3 rounded-full bg-indigo-500 w-0 transition-all duration-1000"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="py-16 bg-slate-50 dark:bg-slate-800/40">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-semibold">Selected Projects</h2>
+                        <p class="mt-1 text-slate-500">Filter and explore SaaS, AI, and web apps I've built.</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button data-filter="*" class="filter-btn px-3 py-1 border rounded">All</button>
+                        <button data-filter="SaaS" class="filter-btn px-3 py-1 border rounded">SaaS</button>
+                        <button data-filter="AI" class="filter-btn px-3 py-1 border rounded">AI</button>
+                        <button data-filter="Web" class="filter-btn px-3 py-1 border rounded">Web</button>
+                    </div>
+                </div>
+
+                <div id="projectsGrid" class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Project Card 1 -->
+                    <article
+                        class="project-card bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow hover:scale-[1.02] transition"
+                        data-category="SaaS">
+                        <button class="w-full text-left p-0 projectOpen">
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
+                                alt="Project screenshot" class="w-full h-44 object-cover" />
+                            <div class="p-4">
+                                <h3 class="font-semibold">BillingPro — subscription billing</h3>
+                                <p class="mt-2 text-sm text-slate-500">Self-serve billing platform for SMBs with
+                                    webhooks and accounting exports.</p>
+                                <div class="mt-3 text-xs text-slate-400">Tech: Node | Next.js | Postgres | Stripe</div>
+                            </div>
+                        </button>
+                    </article>
+
+                    <!-- Project Card 2 -->
+                    <article
+                        class="project-card bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow hover:scale-[1.02] transition"
+                        data-category="AI">
+                        <button class="w-full text-left p-0 projectOpen">
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
+                                alt="Project screenshot" class="w-full h-44 object-cover" />
+                            <div class="p-4">
+                                <h3 class="font-semibold">InsightAI — analytics assistant</h3>
+                                <p class="mt-2 text-sm text-slate-500">AI assistant that turns natural language into
+                                    analytics queries and charts.</p>
+                                <div class="mt-3 text-xs text-slate-400">Tech: Python | Flask | OpenAI | React</div>
+                            </div>
+                        </button>
+                    </article>
+
+                    <!-- Project Card 3 -->
+                    <article
+                        class="project-card bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow hover:scale-[1.02] transition"
+                        data-category="Web">
+                        <button class="w-full text-left p-0 projectOpen">
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+                                alt="Project screenshot" class="w-full h-44 object-cover" />
+                            <div class="p-4">
+                                <h3 class="font-semibold">LandingKit — micro SaaS landing templates</h3>
+                                <p class="mt-2 text-sm text-slate-500">High-converting landing templates for product
+                                    launches.</p>
+                                <div class="mt-3 text-xs text-slate-400">Tech: HTML | Tailwind | Framer</div>
+                            </div>
+                        </button>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="py-16">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-2xl font-semibold">Services</h2>
+                <p class="mt-2 text-slate-500">What I can help you with — quick & reliable.</p>
+
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow">
+                        <h3 class="font-semibold">SaaS Development</h3>
+                        <p class="mt-2 text-sm text-slate-500">From MVP to scale-ready platforms with multi-tenant
+                            design.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow">
+                        <h3 class="font-semibold">Contact Form Integration</h3>
+                        <p class="mt-2 text-sm text-slate-500">Secure form handling, spam protection, deliverability and
+                            CRM routing.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow">
+                        <h3 class="font-semibold">Web & App Development</h3>
+                        <p class="mt-2 text-sm text-slate-500">Responsive frontends, progressive web apps and
+                            native-ready APIs.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow">
+                        <h3 class="font-semibold">AI-Powered Solutions</h3>
+                        <p class="mt-2 text-sm text-slate-500">Recommendation systems, chat assistants and automation
+                            workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section id="testimonials" class="py-16 bg-slate-50 dark:bg-slate-800/40">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-2xl font-semibold">Testimonials</h2>
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow">
+                        <div class="font-semibold">Acme Corp</div>
+                        <div class="mt-2 text-sm text-slate-500">"Delivered the MVP in 6 weeks and reduced churn by 12%
+                            — incredible work."</div>
+                        <div class="mt-3 text-sm text-amber-400">★★★★★</div>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow">
+                        <div class="font-semibold">Beta Studio</div>
+                        <div class="mt-2 text-sm text-slate-500">"Expert in APIs and integrations. Reliable and
+                            communicative."</div>
+                        <div class="mt-3 text-sm text-amber-400">★★★★★</div>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow">
+                        <div class="font-semibold">Solo Founder</div>
+                        <div class="mt-2 text-sm text-slate-500">"Turned an idea into revenue — highly recommended."
+                        </div>
+                        <div class="mt-3 text-sm text-amber-400">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="py-16">
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1">
+                    <img loading="lazy"
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop"
+                        alt="Developer" class="rounded-2xl w-full object-cover shadow" />
+                </div>
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-semibold">About</h2>
+                    <p class="mt-2 text-slate-500">I’m Jane — a SaaS-focused full-stack engineer. I’ve built
+                        multi-tenant platforms, real-time APIs and AI features for startups and SMBs. My background
+                        spans product, engineering, and design which helps me ship user-friendly, performant systems.
+                    </p>
+
+                    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-medium">Career journey</h4>
+                            <p class="text-sm text-slate-500">From contracting at early-stage startups to leading
+                                engineering teams and delivering production-ready SaaS products.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Mission</h4>
+                            <p class="text-sm text-slate-500">To build reliable, maintainable software that helps teams
+                                scale without friction.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex gap-3">
+                        <a href="/resume.pdf" download class="px-4 py-2 border rounded-md">Download Resume</a>
+                        <a href="#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-md">Work with me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG (simple index) -->
+        <section id="blog" class="py-16 bg-slate-50 dark:bg-slate-800/40">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-2xl font-semibold">Blog</h2>
+                <p class="mt-2 text-slate-500">Latest thoughts on building SaaS products and engineering practices.</p>
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <article class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow">
+                        <h3 class="font-semibold">Designing multi-tenant databases</h3>
+                        <p class="mt-2 text-sm text-slate-500">Short excerpt and read time.</p>
+                        <a href="#" class="mt-3 inline-block text-indigo-600">Read →</a>
+                    </article>
+                    <article class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow">
+                        <h3 class="font-semibold">API versioning strategy</h3>
+                        <p class="mt-2 text-sm text-slate-500">Short excerpt and read time.</p>
+                        <a href="#" class="mt-3 inline-block text-indigo-600">Read →</a>
+                    </article>
+                    <article class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow">
+                        <h3 class="font-semibold">Integrating chat assistants</h3>
+                        <p class="mt-2 text-sm text-slate-500">Short excerpt and read time.</p>
+                        <a href="#" class="mt-3 inline-block text-indigo-600">Read →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="py-16">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-2xl font-semibold">Contact</h2>
+                <p class="mt-2 text-slate-500">Want to work together? Send a message and I’ll reply within 48 hours.</p>
+
+                <form id="contactForm" class="mt-6 grid grid-cols-1 gap-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input name="name" required placeholder="Your name"
+                            class="p-3 border rounded-md bg-white dark:bg-slate-900" />
+                        <input name="email" type="email" required placeholder="Email"
+                            class="p-3 border rounded-md bg-white dark:bg-slate-900" />
+                    </div>
+                    <textarea name="message" required placeholder="How can I help?" rows="5"
+                        class="p-3 border rounded-md bg-white dark:bg-slate-900"></textarea>
+                    <div class="flex items-center gap-4">
+                        <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md">Send
+                            message</button>
+                        <div class="text-sm text-slate-500">Or email: <a href="mailto:hello@example.com"
+                                class="text-indigo-600">bigteslaboy@gmail.com</a></div>
+                    </div>
+                </form>
+
+                <!-- Optional Google Maps embed (uncomment and replace the src with your place) -->
+                <!-- <div class="mt-6 aspect-[16/6] rounded-xl overflow-hidden">
+          <iframe src="https://www.google.com/maps/embed?..." class="w-full h-full border-0" loading="lazy"></iframe>
+        </div> -->
+
+                <div class="mt-8 flex gap-4">
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="GitHub">GitHub</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t pt-8 pb-12 mt-8">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="text-sm">© <span id="year">2025</span> Jane Developer. All rights reserved.</div>
+            <div class="flex gap-4 text-sm">
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PROJECT MODAL (reused) -->
+    <div id="modal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-3xl w-full overflow-auto max-h-[90vh] p-6">
+            <button id="modalClose" class="ml-auto mb-4">✕</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Simple DOM helpers
+        const $ = (s, root = document) => root.querySelector(s);
+        const $$ = (s, root = document) => Array.from(root.querySelectorAll(s));
+
+        // Theme toggle
+        const themeToggle = $('#themeToggle');
+        const userPref = localStorage.getItem('theme');
+        if (userPref === 'dark' || (!userPref && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+        themeToggle?.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        // Mobile menu
+        $('#mobileOpen')?.addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('hidden'));
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', (e) => {
+            const href = a.getAttribute('href');
+            if (href.length > 1) {
+                e.preventDefault();
+                document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('mobileMenu')?.classList.add('hidden');
+            }
+        }));
+
+        // Animate progress bars when visible
+        const progressBars = $$('[data-progress]');
+        const inObs = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    el.style.width = el.getAttribute('data-progress') + '%';
+                    inObs.unobserve(el);
+                }
+            });
+        }, { threshold: 0.3 });
+        progressBars.forEach(b => inObs.observe(b));
+
+        // Fade-in for .fade-in elements
+        const fades = $$('.fade-in');
+        const fadeObs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.2 });
+        fades.forEach(f => fadeObs.observe(f));
+
+        // Project modal logic
+        const modal = $('#modal');
+        const modalContent = $('#modalContent');
+        $$('.projectOpen').forEach(btn => btn.addEventListener('click', (e) => {
+            const card = e.currentTarget.closest('.project-card');
+            const title = card.querySelector('h3').innerText;
+            const desc = card.querySelector('p').innerText;
+            const tech = card.querySelector('div.text-xs')?.innerText || '';
+            const img = card.querySelector('img')?.src || '';
+            modalContent.innerHTML = `
+        <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">
+          <div><img src=\"${img}\" loading=\"lazy\" alt=\"${title}\" class=\"w-full h-56 object-cover rounded\" /></div>
+          <div>
+            <h3 class=\"text-xl font-semibold\">${title}</h3>
+            <p class=\"mt-3 text-slate-500\">${desc}</p>
+            <p class=\"mt-3 text-xs text-slate-400\">${tech}</p>
+            <div class=\"mt-4 flex gap-2\">
+              <a href=\"#\" class=\"px-3 py-2 border rounded\">GitHub</a>
+              <a href=\"#\" class=\"px-3 py-2 border rounded\">Live</a>
+            </div>
+          </div>
+        </div>
+      `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }));
+        $('#modalClose')?.addEventListener('click', () => { modal.classList.add('hidden'); modal.classList.remove('flex'); });
+        modal?.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); } });
+
+        // Project filtering
+        $$('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
+            const cat = btn.getAttribute('data-filter');
+            $$('.project-card').forEach(card => {
+                if (cat === '*' || card.getAttribute('data-category') === cat) { card.style.display = ''; }
+                else { card.style.display = 'none'; }
+            });
+        }));
+
+        // Contact form (front-end only) — simple handler
+        $('#contactForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thanks — message sent (this is a demo).');
+            e.target.reset();
+        });
+
+        // Year update
+        document.getElementById('year').innerText = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

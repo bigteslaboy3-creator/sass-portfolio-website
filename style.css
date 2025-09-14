@@ -1,0 +1,51 @@
+ .fade-in {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity .5s ease, transform .5s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(6px);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+            }
+        }
+
+        .filter-btn {
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .filter-btn::before {
+            position: absolute;
+            content: '';
+            background: #6a41e7;
+            width: 100%;
+            height: 100%;
+            top: 0;
+
+            right: 300px;
+
+            pointer-events: none;
+            transition: .7s ease;
+            z-index: -1;
+        }
+
+        .filter-btn:hover::before {
+            right: 0;
+
+        }
+
+        .filter-btn:hover {
+            color: white;
+            z-index: 4;
+        }
